@@ -1,0 +1,81 @@
+.bottle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 412px;
+}
+
+.bottle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5); /* Resmin arka plan rengi (yarı saydam beyaz) */
+  background-image: url('/assets/şişe.jpg');
+  background-size: cover;
+  transition: transform 2s ease-in-out;
+}
+
+.bottle.spin {
+  animation: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+ion-button {
+  --background: #007bff;
+  --color: #ffffff;
+}
+.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.score-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.score-value {
+  margin-right: 10px;
+}
+
+.score-button {
+  font-size: 24px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+
+.score-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.score-button ion-icon {
+  color: #ffffff;
+}
+
+.score-button:hover {
+  border-color: #ff0404; /* İstediğiniz renk */
+}

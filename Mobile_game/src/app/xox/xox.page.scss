@@ -1,0 +1,41 @@
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  .tie {
+    color: #333; /* Berabere yazısı rengi */
+  }
+
+  .x-wins {
+    color: #ff0000; /* X kazandı yazısı rengi */
+  }
+
+  
+  
+  .board button {
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background-color: #f2f2f2; /* Arka plan rengi */
+  }
+  
+  .result {
+    text-align: center;
+    margin-top: 20px;
+  
+    ion-button {
+      margin-top: 10px;
+    }
+  }
+  

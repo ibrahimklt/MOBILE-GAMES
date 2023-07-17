@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <h4 align="center">Dice Roll</h4>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="container">
+    <div class="cube-container">
+      <div class="cube" [ngClass]="{'roll': diceResult !== null}">
+        <div class="side side-1">
+          <div class="dot dot-center"></div>
+        </div>
+        <div class="side side-2">
+          <div class="dot dot-top-left"></div>
+          <div class="dot dot-bottom-right"></div>
+        </div>
+        <div class="side side-3">
+          <div class="dot dot-top-left"></div>
+          <div class="dot dot-center"></div>
+          <div class="dot dot-bottom-right"></div>
+        </div>
+        <div class="side side-4">
+          <div class="dot dot-top-left"></div>
+          <div class="dot dot-top-right"></div>
+          <div class="dot dot-bottom-left"></div>
+          <div class="dot dot-bottom-right"></div>
+        </div>
+        <div class="side side-5">
+          <div class="dot dot-top-left"></div>
+          <div class="dot dot-top-right"></div>
+          <div class="dot dot-center"></div>
+          <div class="dot dot-bottom-left"></div>
+          <div class="dot dot-bottom-right"></div>
+        </div>
+        <div class="side side-6">
+          <div class="dot dot-top-left"></div>
+          <div class="dot dot-top-right"></div>
+          <div class="dot dot-middle-left"></div>
+          <div class="dot dot-middle-right"></div>
+          <div class="dot dot-bottom-left"></div>
+          <div class="dot dot-bottom-right"></div>
+        </div>
+      </div>
+    </div>
+
+    <ion-button expand="full" (click)="rollDice()" [disabled]="diceResult !== null">Zarı At</ion-button>
+
+    <div class="result" *ngIf="diceResult !== null">Result: {{ diceResult }}</div>
+  </div>
+</ion-content>

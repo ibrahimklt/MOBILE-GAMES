@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Yılan Oyunu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="game-container">
+    <canvas #gameCanvas></canvas>
+    <div class="game-over" *ngIf="gameOver">
+      Game Over
+    </div>
+  </div>
+
+  <div class="button-container">
+    <div class="direction-buttons">
+      <div class="vertical-buttons">
+        <ion-button expand="full" (click)="changeDirection('up')" color="primary" class="up-button">
+          Yukarı
+        </ion-button>
+        <ion-button expand="full" (click)="changeDirection('down')" color="primary" class="down-button">
+          Aşağı
+        </ion-button>
+      </div>
+      <div class="horizontal-buttons">
+        <ion-button expand="full" (click)="changeDirection('left')" color="primary" class="left-button">
+          Sol
+        </ion-button>
+        <ion-button expand="full" (click)="startGame()" color="primary" class="start-button">
+          Başlat
+        </ion-button>
+        <ion-button expand="full" (click)="changeDirection('right')" color="primary" class="right-button">
+          Sağ
+        </ion-button>
+      </div>
+    </div>
+    <ion-button expand="full" (click)="stopGame()" color="primary" class="restart-button">
+      Yeniden Başlat
+    </ion-button>
+  </div>
+</ion-content>

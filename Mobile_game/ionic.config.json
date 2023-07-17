@@ -1,0 +1,7 @@
+{
+  "name": "final_sinav",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

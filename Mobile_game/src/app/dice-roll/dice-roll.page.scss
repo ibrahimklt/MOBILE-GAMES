@@ -1,0 +1,107 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40%;
+}
+
+.cube-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+}
+
+.roll {
+  animation-name: rollAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.side {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #333333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  display: block;
+  background-color: #ffffff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.dot-top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.dot-top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.dot-bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.dot-bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+.dot-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dot-middle-left {
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.dot-middle-right {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes rollAnimation {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(720deg) rotateY(720deg) rotateZ(720deg);
+  }
+}

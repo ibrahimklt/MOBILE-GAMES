@@ -1,0 +1,59 @@
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40%;
+  }
+
+  .direction-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .vertical-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .up-button, .down-button {
+    width: 120px;
+    margin-bottom: 5px;
+  }
+
+  .horizontal-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .left-button, .right-button {
+    width: 80px;
+    margin: 0 5px;
+  }
+
+  .start-button {
+    margin-top: 10px;
+    width: 120px;
+  }
+
+  .restart-button {
+    margin-top: 20px;
+    width: 120px;
+  }
+
+  .game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+  }
+
+  canvas {
+    border: 1px solid #000;
+  }

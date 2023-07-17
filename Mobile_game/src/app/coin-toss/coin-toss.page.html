@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><h4 align="center">Coin Toss</h4></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <div class="container">
+    <div class="vertical-center">
+      <div id="coin" (click)="flipCoin()" [class.flipping]="flipping" [class.heads]="result === 'heads'" [class.tails]="result === 'tails'">
+        <img *ngIf="result === 'heads'" [src]="'assets/' + images[0]" class="side-a">
+        <img *ngIf="result === 'tails' || result === ''" [src]="'assets/' + images[1]" class="side-b">
+      </div>
+      <div class="button-container">
+        <ion-button expand="full" (click)="flipCoin()" class="button">Yazı Tura At</ion-button>
+      </div>
+    </div>
+  </div>
+
+  
+</ion-content>

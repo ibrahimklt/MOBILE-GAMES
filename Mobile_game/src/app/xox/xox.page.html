@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      XOX Oyunu
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="board">
+    <button *ngFor="let cell of cells; let i = index" (click)="makeMove(i)">
+      {{ cell }}
+    </button>
+  </div>
+
+  <div *ngIf="winner !== null" class="result">
+    <h2 class="tie" *ngIf="winner === ''">Berabere!</h2>
+    <h2 class="x-wins" *ngIf="winner !== ''">{{ winner }} Kazandı!</h2>
+    <ion-button (click)="resetGame()">Yeniden Başla</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title > <h4 align="center">Bottle Spin</h4>  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="bottle-container">
+    <div class="bottle" [class.spin]="spinning" [style.transform]="'rotate(' + rotationAngle + 'deg)'"></div>
+  </div>
+  <div class="button-container">
+    <ion-button expand="full" fill="solid" color="primary" shape="round" size="large" [disabled]="spinning" (click)="spinBottle()">
+      <ion-icon name="reload" slot="start"></ion-icon>
+      Şişeyi Çevir
+    </ion-button>
+  </div>
+  <!-- Skor tablosu -->
+  <div class="score-container">
+    <div class="score-row">
+      <div class="score-label">Oyuncu 1:</div>
+      <div class="score-value">{{ player1Score }}</div>
+      <button class="score-button plus" (click)="increaseScore('player1')">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button class="score-button minus" (click)="decreaseScore('player1')">
+        <ion-icon name="remove"></ion-icon>
+      </button>
+    </div>
+    <div class="score-row">
+      <div class="score-label">Oyuncu 2:</div>
+      <div class="score-value">{{ player2Score }}</div>
+      <button class="score-button plus" (click)="increaseScore('player2')">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button class="score-button minus" (click)="decreaseScore('player2')">
+        <ion-icon name="remove"></ion-icon>
+      </button>
+    </div>
+    <div class="score-row">
+      <div class="score-label">Oyuncu 3:</div>
+      <div class="score-value">{{ player3Score }}</div>
+      <button class="score-button plus" (click)="increaseScore('player3')">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button class="score-button minus" (click)="decreaseScore('player3')">
+        <ion-icon name="remove"></ion-icon>
+      </button>
+    </div>
+  </div>
+
+  
+</ion-content>
